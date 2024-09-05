@@ -5,7 +5,7 @@ const Router = () => {
     return (
         <Routes>
             {publicRoutes?.map((route) => {
-                return <Route key={route?.path} element={route?.component} />
+                return <Route key={route?.path} path={route?.path} element={route?.component} />
             })}
         </Routes>
     )
