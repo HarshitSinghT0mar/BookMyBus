@@ -1,0 +1,15 @@
+const Input = ({ label, type, value, onChange, placeholder, required = false }) => (
+    <div className="mb-4">
+        <label className="block text-xs font-medium text-gray-700">{label}</label>
+        <input
+            type={type}
+            value={value}
+            onChange={onChange}
+            className="mt-1 block text-xs w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-primary focus:border-primary"
+            placeholder={placeholder}
+            required={required}
+        />
+    </div>
+);
+
+export default Input;

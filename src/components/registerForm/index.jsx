@@ -1,33 +1,46 @@
+import { FcGoogle } from "react-icons/fc";
+import Input from "../ui/input";
+import { useRegisterFormController } from "./registerForm.controller";
 
-const RegisterForm = ({ onToggle }) => {
+const RegisterForm = () => {
+    const { registerUser, handleUserInput, registerFormData } = useRegisterFormController()
     return (
-        <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4">
-            <h2 className="text-center text-2xl font-bold">Register</h2>
-            <input
-                type="text"
-                placeholder="Username"
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <button className="w-full bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600">
-                {`Register`}
-            </button>
-            <p className="text-center">
-                {`Already have an account?`}
-                <button onClick={onToggle} className="text-indigo-500 underline">
-                    {`Login`}
+        <>
+            <h2 className="text-3xl font-semibold text-center">Register</h2>
+            <p className="mt-2 text-center text-gray-600">Create a new account by filling in the form below.</p>
+            <form onSubmit={registerUser} className="mt-6">
+                <Input
+                    label="Full Name"
+                    type="text"
+                    placeholder="John Doe"
+                    onChange={handleUserInput}
+                />
+                <Input
+                    label="Email"
+                    type="email"
+                    value={registerFormData?.email}
+                    onChange={handleUserInput}
+                    placeholder="you@example.com"
+                />
+                <Input
+                    label="Password"
+                    type="password"
+                    value={registerFormData?.password}
+                    onChange={handleUserInput}
+                    placeholder="********"
+                />
+                <button
+                    type="submit"
+                    className="w-full px-4 py-2 text-white bg-primary rounded-md hover:bg-pink-700 focus:outline-none"
+                >
+                    {`Register`}
                 </button>
-            </p>
-        </div>
+                <div className="self-center flex gap-4 items-center mt-4 cursor-pointer" >
+                    <FcGoogle className="cursor-pointer text-xl" />
+                    <span className="underline text-blue-600 text-xs">Already a user? Login</span>
+                </div>
+            </form>
+        </>
     );
 };
 

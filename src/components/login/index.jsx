@@ -1,27 +1,32 @@
+import { FcGoogle } from "react-icons/fc";
+import PrimaryButton from "../ui/button/primaryButton";
+import Input from "../ui/input";
 
-const LoginForm = ({ onToggle }) => {
+const LoginForm = () => {
+
     return (
-        <div className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-4">
-            <h2 className="text-center text-2xl font-bold">Login</h2>
-            <input
-                type="email"
-                placeholder="Email"
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <input
-                type="password"
-                placeholder="Password"
-                className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
-            />
-            <button className="w-full bg-indigo-500 text-white px-4 py-2 rounded-md hover:bg-indigo-600">
-                Login
-            </button>
-            <p className="text-center">
-                {`Don't have an account?`}
-                <button onClick={onToggle} className="text-indigo-500 underline">
-                    Register
-                </button>
-            </p>
+        <div className="flex flex-col gap-2">
+            <h2 className="text-3xl font-semibold text-center">{`Login`}</h2>
+            <p className="text-center text-gray-600">{`Enter your email and password to access your account.`}</p>
+            <form className="">
+                <Input
+                    label="Email"
+                    type="email"
+                    placeholder="you@example.com"
+                />
+                <Input
+                    label="Password"
+                    type="password"
+                    placeholder="********"
+                />
+                <PrimaryButton onClick={() => { }}>
+                    <span className="text-sm">{`Login`}</span>
+                </PrimaryButton>
+            </form>
+            <div className="self-center flex gap-4 items-center mt-4">
+                <FcGoogle className="cursor-pointer text-xl" />
+                <span className="underline text-blue-600 text-xs cursor-pointer">{`Signup here`}</span>
+            </div>
         </div>
     );
 };
