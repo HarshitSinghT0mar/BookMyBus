@@ -12,4 +12,5 @@ export const publicRoutes = [
         component: <RegisterForm />,
         role: ['user'],
     },
+    
 ]
