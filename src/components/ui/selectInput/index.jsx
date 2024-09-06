@@ -2,8 +2,8 @@ import Select from 'react-select';
 
 const DropdownIndicator = () => null;
 
-const SelectInput = ({ options, placeholder, onChange, value }) => {
-    const formattedOptions = options.map((option) => ({
+const SelectInput = ({ options, placeholder, onChange, name }) => {
+    const formattedOptions = options?.map((option) => ({
         value: option,
         label: option,
     }));
@@ -13,7 +13,7 @@ const SelectInput = ({ options, placeholder, onChange, value }) => {
             options={formattedOptions}
             placeholder={placeholder}
             onChange={onChange}
-            value={formattedOptions.find(opt => opt.value === value)}
+            name={name}
             className=" focus:ring-primary focus:border-primary w-40"
             components={{ DropdownIndicator }}
         />

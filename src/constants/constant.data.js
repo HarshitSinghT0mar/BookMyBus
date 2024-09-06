@@ -493,6 +493,57 @@ export const documentsToRoutes = [
                 "busName": "Express Shuttle"
             }
         ]
+    },
+    {
+        "routeId": "indore-mumbai",
+        "source": "Indore",
+        "destination": "Mumbai",
+        "buses": [
+            {
+                "rating": "4.2",
+                "busId": "bus239",
+                "amenities": ["WiFi", "AC", "Snack"],
+                "availableSeats": "20",
+                "departureTime": "2024-09-12T08:00:00Z",
+                "arrivalTime": "2024-09-12T18:00:00Z",
+                "price": "1300",
+                "totalSeats": "25",
+                "busName": "Super Deluxe"
+            },
+            {
+                "rating": "4.0",
+                "busId": "bus240",
+                "amenities": ["AC", "Charging Point"],
+                "availableSeats": "18",
+                "departureTime": "2024-09-12T11:00:00Z",
+                "arrivalTime": "2024-09-12T21:00:00Z",
+                "price": "1200",
+                "totalSeats": "20",
+                "busName": "Comfort Express"
+            },
+            {
+                "rating": "4.3",
+                "busId": "bus241",
+                "amenities": ["WiFi", "Snack", "Blanket"],
+                "availableSeats": "22",
+                "departureTime": "2024-09-12T15:00:00Z",
+                "arrivalTime": "2024-09-12T23:00:00Z",
+                "price": "1400",
+                "totalSeats": "25",
+                "busName": "Luxury Travel"
+            },
+            {
+                "rating": "4.1",
+                "busId": "bus242",
+                "amenities": ["AC"],
+                "availableSeats": "25",
+                "departureTime": "2024-09-12T19:00:00Z",
+                "arrivalTime": "2024-09-13T05:00:00Z",
+                "price": "1100",
+                "totalSeats": "30",
+                "busName": "Economy Shuttle"
+            }
+        ]
     }
 ]
 

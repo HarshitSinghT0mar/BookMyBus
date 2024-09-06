@@ -18,5 +18,10 @@ export const publicRoutes = [
         component: <LandingPage />,
         role: ['user'],
     },
+    {
+        path: '/:routeId',
+        component: <LandingPage />,
+        role: ['user'],
+    },
 
 ]

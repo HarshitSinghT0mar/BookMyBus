@@ -7,7 +7,7 @@ import BusDetailsCard from '../../components/busDetailsCard'
 import { documentsToRoutes } from '../../constants/constant.data'
 
 const LandingPage = () => {
-    const { route, handleRouteChange, selectJourneyDate, journeyDate, addRoutes } = useLandingPageController()
+    const { currentRouteData, handleRouteChange, selectJourneyDate, journeyDate, searchRoutes } = useLandingPageController()
 
     return (
         <>
@@ -21,32 +21,36 @@ const LandingPage = () => {
                         <SelectInput
                             options={CITIES}
                             placeholder="From"
-                            value={route?.source}
+                            name='source'
                             onChange={handleRouteChange}
                         />
                         <SelectInput
                             options={CITIES}
                             placeholder="To"
-                            value={route?.destination}
+                            name='destination'
                             onChange={handleRouteChange}
                         />
                         <Input
                             type="date"
                             placeholder="dd-mm-yyyy"
+                            name='journeyDate'
                             onChange={selectJourneyDate}
                             value={journeyDate}
                         />
                         <PrimaryButton
                             className='bg-red-600 max-w-28 hover:bg-red-700 px-0 py-0'
-                            onClick={addRoutes}
+                            onClick={searchRoutes}
                         >
                             <span className="text-xs">{`Search`}</span>
                         </PrimaryButton>
                     </form>
                 </div>
             </div>
-            
-            <BusDetailsCard {...documentsToRoutes[0]?.buses[0]} />
+            <div className='grid grid-cols-3 gap-6 mt-4 p-4'>
+                {currentRouteData?.buses?.map((bus) => {
+                    return <BusDetailsCard key={bus?.busId} {...bus} />
+                })}
+            </div>
         </>
     )
 }
