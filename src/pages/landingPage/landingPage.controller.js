@@ -1,4 +1,8 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import getDocumentData from "../../utils/getDocumentData"
+import { COLLECTIONS } from "../../constants"
+import { addMultipleDocuments } from "../../utils/addDocuments"
+import { documentsToRoutes } from "../../constants/constant.data"
 
 const INITIAL_ROUTE_DATA = {
     source: '',
@@ -23,12 +27,30 @@ export const useLandingPageController = () => {
 
         setJourneyDate(isoString)
     }
-    console.log({journeyDate});
-    
+
+    const getRouteBuses = async () => {
+        const res = await getDocumentData(COLLECTIONS?.ROUTES, 'delhi-kanpur')
+        console.log({ res });
+    }
+
+
+    const addRoutes = async () => {
+        const res = await addMultipleDocuments(COLLECTIONS?.ROUTES, documentsToRoutes)
+        console.log({ res });
+
+    }
+
+    useEffect(() => {
+        getRouteBuses()
+
+    }, [])
+
+
     return {
         route,
         handleRouteChange,
         journeyDate,
-        selectJourneyDate
+        selectJourneyDate,
+        addRoutes
     }
 }

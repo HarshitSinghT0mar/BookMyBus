@@ -1,5 +1,4 @@
 const Input = ({ label, type, name, value, onChange, placeholder, required = false }) => {
-console.log({value});
 
   return  (
         <div className="mb-4">

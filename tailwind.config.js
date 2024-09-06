@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#E91E63',
-        primaryDark: '#be185d'
+        primary: '#ef4444',
+        primaryDark: '#dc2626'
       },
       fontFamily: {
         primaryFont: ['Santoshi', 'sans-serif']
