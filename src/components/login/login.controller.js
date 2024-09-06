@@ -1,6 +1,7 @@
 import { signInWithEmailAndPassword } from "firebase/auth"
 import { useState } from "react"
 import { auth } from "../../services/firebase"
+import { useNavigate } from "react-router"
 
 const Initial_Login_Data = {
     email: '',
@@ -10,6 +11,7 @@ const Initial_Login_Data = {
 export const useLoginController = () => {
     const [isLoading, setIsLoading] = useState(false)
     const [loginData, setLoginData] = useState(Initial_Login_Data)
+    const navigate = useNavigate()
 
     const handleUserInput = (e) => {
         const { name, value } = e.target
@@ -17,14 +19,11 @@ export const useLoginController = () => {
     }
     const loginUser = async (e) => {
         e.preventDefault()
-        console.log({loginData});
-        
         const { email, password } = loginData;
         setIsLoading(true)
         try {
-            const user = await signInWithEmailAndPassword(auth,email, password)
-            console.log({user});
-            
+            const user = await signInWithEmailAndPassword(auth, email, password)
+            navigate('/')
             localStorage.setItem('userData', JSON.stringify(user))
         } catch (error) {
             console.log(error);

@@ -5,9 +5,10 @@ import { Link } from "react-router-dom";
 import { useLoginController } from "./login.controller";
 
 const LoginForm = () => {
-    const { handleUserInput, loginData, isLoading, loginUser } = useLoginController()
+    const { handleUserInput, loginData, isLoading,loginUser } = useLoginController()
 
     return (
+        
         <div className="w-full max-w-sm p-6 bg-white rounded-md shadow-md border border-solid">
             <div className="flex flex-col gap-4">
                 <div className="flex flex-col">
