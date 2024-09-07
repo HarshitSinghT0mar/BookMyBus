@@ -1,15 +1,16 @@
-import { FaChargingStation, FaRegClock, FaWifi } from 'react-icons/fa';
+import { FaRegClock, } from 'react-icons/fa';
 import { getTimeWithAmPm } from '../../utils/getTime';
 
 const BusDetailsCard = ({
     departureTime,
     arrivalTime,
-    busName='',
-    route='',
-    price=0,
-    availableSeats
+    busName = '',
+    route = '',
+    price = 0,
+    availableSeats,
+    amenities
 }) => {
-    
+
     return (
         <div className="max-w-sm rounded-lg border border-gray-200 p-4 shadow-sm">
             <div className="flex justify-between mb-4">
@@ -27,9 +28,12 @@ const BusDetailsCard = ({
                 <span className="text-gray-600">{availableSeats} seats available</span>
             </div>
 
-            <div className="flex space-x-2 mb-4">
-                <FaWifi className="text-gray-500" size={20} />
-                <FaChargingStation className="text-gray-500" size={20} />
+            <div className="flex space-x-1 mb-4">
+                {/* <FaWifi className="text-gray-500" size={20} />
+                <FaChargingStation className="text-gray-500" size={20} /> */}
+                {amenities?.map((amenity) => {
+                    return <span className='text-gray-500 text-xs' key={amenity}>{amenity}</span>
+                })}
             </div>
 
             <button className="w-full bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 transition-colors">
@@ -41,9 +45,9 @@ const BusDetailsCard = ({
 
 const TimeDisplay = ({ time }) => {
 
-console.log({time});
+    console.log({ time });
 
-  return  <div className="flex items-center gap-2">
+    return <div className="flex items-center space-x-2">
         <FaRegClock />
         <span>{getTimeWithAmPm(time)}</span>
     </div>

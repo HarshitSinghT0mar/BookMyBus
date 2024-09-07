@@ -544,7 +544,59 @@ export const documentsToRoutes = [
                 "busName": "Economy Shuttle"
             }
         ]
+    },
+    {
+        "routeId": "bangalore-hyderabad",
+        "source": "Bangalore",
+        "destination": "Hyderabad",
+        "buses": [
+            {
+                "rating": "4.3",
+                "busId": "bus301",
+                "amenities": ["WiFi", "AC", "Charging Point"],
+                "availableSeats": "30",
+                "departureTime": "2024-09-01T08:30:00Z",
+                "arrivalTime": "2024-09-01T16:30:00Z",
+                "price": "1500",
+                "totalSeats": "45",
+                "busName": "Velocity Travel"
+            },
+            {
+                "rating": "4.1",
+                "busId": "bus302",
+                "amenities": ["AC", "Snack", "Blanket"],
+                "availableSeats": "18",
+                "departureTime": "2024-09-01T12:00:00Z",
+                "arrivalTime": "2024-09-01T20:00:00Z",
+                "price": "1400",
+                "totalSeats": "35",
+                "busName": "Comfort Cruiser"
+            },
+            {
+                "rating": "4.6",
+                "busId": "bus303",
+                "amenities": ["WiFi", "Snack", "Blanket", "Charging Point"],
+                "availableSeats": "22",
+                "departureTime": "2024-09-01T17:00:00Z",
+                "arrivalTime": "2024-09-02T01:00:00Z",
+                "price": "1600",
+                "totalSeats": "40",
+                "busName": "Elite Shuttle"
+            },
+            {
+                "rating": "3.8",
+                "busId": "bus304",
+                "amenities": ["AC", "Water Bottle"],
+                "availableSeats": "28",
+                "departureTime": "2024-09-01T21:30:00Z",
+                "arrivalTime": "2024-09-02T05:30:00Z",
+                "price": "1300",
+                "totalSeats": "50",
+                "busName": "Budget Ride"
+            }
+        ]
     }
+
 ]
 
 

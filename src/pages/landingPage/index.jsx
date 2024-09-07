@@ -4,7 +4,6 @@ import { CITIES } from '../../data/cities'
 import SelectInput from '../../components/ui/selectInput'
 import { useLandingPageController } from './landingPage.controller'
 import BusDetailsCard from '../../components/busDetailsCard'
-import { documentsToRoutes } from '../../constants/constant.data'
 
 const LandingPage = () => {
     const { currentRouteData, handleRouteChange, selectJourneyDate, journeyDate, searchRoutes } = useLandingPageController()
