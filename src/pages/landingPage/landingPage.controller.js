@@ -2,8 +2,8 @@ import { useEffect, useState } from "react"
 import getDocumentData from "../../utils/getDocumentData"
 import { COLLECTIONS } from "../../constants"
 import { addMultipleDocuments } from "../../utils/addDocuments"
-import { documentsToRoutes } from "../../constants/constant.data"
 import { useNavigate, useParams } from "react-router"
+import { documentsToRoutes } from "../../constants/constant.data"
 
 const INITIAL_ROUTE_DATA = {
     source: '',
@@ -55,7 +55,7 @@ export const useLandingPageController = () => {
 
 
     useEffect(() => {
-        const getRouteBuses = async () => {
+        const getRouteBuses = async (routeId) => {
             const res = await getDocumentData(COLLECTIONS?.ROUTES, routeId)
             setCurrentRouteData(res)
         }

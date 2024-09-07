@@ -1,7 +1,7 @@
 import { FaLongArrowAltRight, FaRegClock, } from 'react-icons/fa';
 import { getTimeWithAmPm } from '../../utils/getTime';
 import PrimaryButton from '../ui/button/primaryButton';
-import { Link } from 'react-router-dom';
+import { AMENITIES_ICONS } from '../../constants/constant.data';
 
 const BusDetailsCard = ({
     departureTime,
@@ -32,11 +32,10 @@ const BusDetailsCard = ({
                 <span className="text-gray-600">{availableSeats} seats available</span>
             </div>
             <div className='flex justify-between w-full items-center mb-4'>
-                <div className="flex space-x-1  items-center">
-                    {/* <FaWifi className="text-gray-500" size={20} />
-                <FaChargingStation className="text-gray-500" size={20} /> */}
+                <div className="flex space-x-2 items-center">
+
                     {amenities?.map((amenity) => {
-                        return <span className='text-gray-500 text-xs' key={amenity}>{amenity}</span>
+                        return <span title={amenity} className='text-gray-500 text-xs' key={amenity}>{AMENITIES_ICONS[amenity]}</span>
                     })}
                 </div>
                 <div className="text-gray-600 text-xs flex gap-1 space-x-1 items-center">

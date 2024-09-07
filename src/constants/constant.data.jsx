@@ -1,3 +1,8 @@
+import { FaBed, FaLightbulb, FaMedkit, FaSnowflake } from "react-icons/fa";
+import { FaBottleWater, FaMattressPillow } from "react-icons/fa6";
+import { GiStoneStack } from "react-icons/gi";
+import { MdPower, MdTv, MdWifi } from "react-icons/md";
+
 export const documentsToRoutes = [
     {
         "routeId": "delhi-mumbai",
@@ -1164,3 +1169,15 @@ export const documentsToRoutes = [
 
 
 
+export const AMENITIES_ICONS = {
+    "WiFi": <MdWifi />,
+    "AC": <FaSnowflake />,
+    "Snack": <GiStoneStack />,
+    "Charging Point": <MdPower />,
+    "Blanket": <FaBed />,
+    "Water Bottle": <FaBottleWater />,
+    "TV": <MdTv />,
+    "Reading Light": <FaLightbulb />,
+    "Pillow": <FaMattressPillow />,
+    "First Aid": <FaMedkit />
+};

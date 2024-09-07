@@ -1,5 +1,6 @@
 import LoginForm from "../components/login"
 import RegisterForm from "../components/registerForm"
+import BusDetailsAndSeatSelection from "../pages/busDetailsAndSeatSelection"
 import LandingPage from "../pages/landingPage"
 
 export const publicRoutes = [
@@ -21,6 +22,11 @@ export const publicRoutes = [
     {
         path: '/:routeId',
         component: <LandingPage />,
+        role: ['user'],
+    },
+    {
+        path: '/:routeId/:busId',
+        component: <BusDetailsAndSeatSelection />,
         role: ['user'],
     },
 
