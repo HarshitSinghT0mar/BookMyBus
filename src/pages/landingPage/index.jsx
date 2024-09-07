@@ -6,11 +6,11 @@ import { useLandingPageController } from './landingPage.controller'
 import BusDetailsCard from '../../components/busDetailsCard'
 
 const LandingPage = () => {
-    const { currentRouteData, handleRouteChange, selectJourneyDate, journeyDate, searchRoutes } = useLandingPageController()
+    const { currentRouteData, handleRouteChange, selectJourneyDate, journeyDate, searchRoutes, routeId } = useLandingPageController()
 
     return (
         <>
-            <div className="bg-gradient-to-r from-primary to-primaryDark p-8  h-72 w-full">
+            <div className="bg-primary-gradient p-8  h-72 w-full">
                 <div className='flex flex-col justify-center items-center h-full'>
                     <div className='mb-6 text-white'>
                         <h1 className="text-4xl font-bold mb-4">Book Your Bus Tickets</h1>
@@ -29,13 +29,13 @@ const LandingPage = () => {
                             name='destination'
                             onChange={handleRouteChange}
                         />
-                        <Input
+                        {/* <Input
                             type="date"
                             placeholder="dd-mm-yyyy"
                             name='journeyDate'
                             onChange={selectJourneyDate}
                             value={journeyDate}
-                        />
+                        /> */}
                         <PrimaryButton
                             className='bg-red-600 max-w-28 hover:bg-red-700 px-0 py-0'
                             onClick={searchRoutes}
@@ -45,11 +45,11 @@ const LandingPage = () => {
                     </form>
                 </div>
             </div>
-            <div className='grid grid-cols-3 gap-6 mt-4 p-4'>
+            {(currentRouteData && currentRouteData?.buses?.length) ? <div className='grid grid-cols-3 gap-6 mt-4 p-4'>
                 {currentRouteData?.buses?.map((bus) => {
-                    return <BusDetailsCard key={bus?.busId} {...bus} />
+                    return <BusDetailsCard key={bus?.busId} {...currentRouteData} {...bus} routeId={routeId} />
                 })}
-            </div>
+            </div> : <p className='text-center mt-6'>No Buses Available</p>}
         </>
     )
 }

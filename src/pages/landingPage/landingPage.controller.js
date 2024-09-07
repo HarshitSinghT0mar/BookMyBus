@@ -17,9 +17,6 @@ export const useLandingPageController = () => {
     const navigate = useNavigate()
     const { routeId } = useParams()
     const handleRouteChange = (option, actionMeta) => {
-        console.log('Option:', option);
-        console.log('ActionMeta:', actionMeta);
-
         if (!option || !actionMeta) {
             console.error('Option or actionMeta is missing:', { option, actionMeta });
             return;
@@ -63,6 +60,7 @@ export const useLandingPageController = () => {
             setCurrentRouteData(res)
         }
         getRouteBuses(routeId)
+        // addRoutes()
     }, [routeId])
 
 
@@ -73,6 +71,7 @@ export const useLandingPageController = () => {
         selectJourneyDate,
         addRoutes,
         searchRoutes,
-        currentRouteData
+        currentRouteData,
+        routeId
     }
 }

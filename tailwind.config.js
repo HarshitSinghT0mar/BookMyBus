@@ -6,6 +6,9 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'primary-gradient': 'linear-gradient(to right, #ef4444, #f87171, #ccc)',
+      },
       colors: {
         primary: '#ef4444',
         primaryDark: '#dc2626'
