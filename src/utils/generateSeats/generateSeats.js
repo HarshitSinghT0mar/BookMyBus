@@ -23,7 +23,8 @@ export function generateSeats(totalSeats, availableSeats) {
             reservation: {
                 category: isBooked ? getRandomElement(categories) : null,  // Assign random category if booked
                 isReserved: isBooked ? Math.random() < 0.5 : false  // Randomly set isReserved if booked
-            }
+            },
+        
         };
         seats.push(seat);
     }

@@ -11,7 +11,8 @@ export default {
       },
       colors: {
         primary: '#ef4444',
-        primaryDark: '#dc2626'
+        primaryDark: '#dc2626',
+        disabled: '#d1d5db'
       },
       fontFamily: {
         primaryFont: ['Santoshi', 'sans-serif']

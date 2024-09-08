@@ -4,8 +4,6 @@ import { COLLECTIONS } from "../../constants"
 import { addMultipleDocuments } from "../../utils/addDocuments"
 import { useNavigate, useParams } from "react-router"
 import { documentsToBuses } from "../../constants/constant.data"
-import { getAllDocuments } from "../../utils/getAllDocuments"
-import { addSeatsToRoutes } from "../../utils/generateSeats/generateSeats"
 
 const INITIAL_ROUTE_DATA = {
     source: '',
@@ -59,19 +57,11 @@ export const useLandingPageController = () => {
         const getRouteBuses = async (routeId) => {
             const res = await getDocumentData(COLLECTIONS?.ROUTES, routeId)
             setCurrentRouteData(res)
-            const res1 = await getAllDocuments(COLLECTIONS?.BUSES)
-            console.log({ res1 });
-            const updatedBusData = addSeatsToRoutes(res1)
-                console.log({updatedBusData});
-                
-            const buswithseats = await addMultipleDocuments(COLLECTIONS?.BUSES, updatedBusData)
-            console.log({buswithseats});
-            
 
         }
         getRouteBuses(routeId)
 
-        
+
     }, [routeId])
 
 
