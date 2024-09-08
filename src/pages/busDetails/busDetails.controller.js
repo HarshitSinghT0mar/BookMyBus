@@ -8,7 +8,6 @@ export const useBusDetailsController = () => {
     const [selectedSeats, setSelectedSeats] = useState([]);
     const [currentRouteBusData, setCurrentRouteBusData] = useState({})
     const { busId, routeId } = useParams()
-    const [isSelected,setIsSelected]=useState(false)
 
     const getBusDetails = async () => {
         const res = await getDocumentData(COLLECTIONS?.BUSES, busId)
@@ -19,8 +18,15 @@ export const useBusDetailsController = () => {
         setCurrentRouteBusData(currentRoute[0])
     }
 
-console.log({busData,currentRouteBusData});
-
+    const handleSelectedSeats = ({ seatId }) => {
+        setSelectedSeats((prevSelectedSeats) => {
+            if (prevSelectedSeats?.includes(seatId)) {
+                return prevSelectedSeats?.filter((seat) => seat !== seatId);
+            } else {
+                return [...prevSelectedSeats, seatId];
+            }
+        });
+    }
 
     useState(() => {
         getBusDetails()
@@ -33,7 +39,6 @@ console.log({busData,currentRouteBusData});
         selectedSeats,
         setSelectedSeats,
         currentRouteBusData,
-        isSelected,
-        setIsSelected
+        handleSelectedSeats
     }
 }

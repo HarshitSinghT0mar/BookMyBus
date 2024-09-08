@@ -21,7 +21,7 @@ const SeatButton = ({ seatId, isBooked, reservation = {}, onClick = () => { } })
         <button
             title={category ?? 'Regular'}
             className={seatClass}
-            onClick={(e) => { onClick(e); setIsSelected(prev=>!prev) }}
+            onClick={(e) => { onClick({e,seatId}); setIsSelected(prev=>!prev) }}
             disabled={isBooked || isReserved}
         >
             {seatId}

@@ -5,7 +5,7 @@ import SeatGrid from './components/seatGrid';
 import PaymentSummaryCard from '../../components/paymentSummaryCard';
 
 const BusDetails = () => {
-    const { busData, currentRouteBusData, isSelected, setIsSelected } = useBusDetailsController()
+    const { busData, currentRouteBusData, selectedSeats ,handleSelectedSeats, handlePayment} = useBusDetailsController()
     const { totalSeats, price, amenities, rating, busName, routes } = busData || {}
     const { source, destination, departureTime, arrivalTime } = currentRouteBusData || {}
 
@@ -15,8 +15,8 @@ const BusDetails = () => {
                 <div className="flex justify-between items-start">
                     <div>
                         <h1 className="text-3xl flex space-x-1 items-center font-bold mb-2">{busName}</h1>
-                        <h2 className="text-2xl flex space-x-1 items-center font-bold mb-2">
-                            
+                        <h2 className="text-xl flex space-x-1 items-center font-bold mb-2">
+
                             <span>{source}</span>
                             <FaLongArrowAltRight />
                             <span>{destination}</span>
@@ -44,9 +44,9 @@ const BusDetails = () => {
             <div className='grid grid-cols-3 mt-4 space-x-12 p-4'>
                 <div className='col-span-2 '>
                     <h2 className='text-2xl font-bold mb-4 text-gray-800 '>Select Seats</h2>
-                    <SeatGrid {...currentRouteBusData} isSelected={isSelected} setIsSelected={setIsSelected}  />
+                    <SeatGrid {...currentRouteBusData} handleSelectedSeats={handleSelectedSeats} />
                 </div>
-                <PaymentSummaryCard />
+                <PaymentSummaryCard selectedSeats={selectedSeats} pricePerSeat={Number(price)} handlePayment={ handlePayment} />
             </div>
         </div>
     );
