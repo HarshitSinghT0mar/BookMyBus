@@ -1,6 +1,6 @@
 import LoginForm from "../components/login"
 import RegisterForm from "../components/registerForm"
-import BusDetailsAndSeatSelection from "../pages/busDetailsAndSeatSelection"
+import BusDetailsAndSeatSelection from "../pages/busDetails"
 import LandingPage from "../pages/landingPage"
 
 export const publicRoutes = [

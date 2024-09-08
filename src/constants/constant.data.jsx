@@ -1181,3 +1181,540 @@ export const AMENITIES_ICONS = {
     "Pillow": <FaMattressPillow />,
     "First Aid": <FaMedkit />
 };
+
+
+export const documentsToBuses1 = [
+    {
+        "rating": "3.9",
+        "busId": "bus105",
+        "amenities": ["AC", "Blanket"],
+        "availableSeats": "30",
+        "departureTime": "2024-09-05T14:00:00Z",
+        "arrivalTime": "2024-09-05T22:00:00Z",
+        "price": "700",
+        "totalSeats": "35",
+        "busName": "Western Shuttle",
+        "routes": [
+            {
+                "routeId": "hyderabad-pune",
+                "source": "Hyderabad",
+                "destination": "Pune",
+                "departureTime": "2024-09-05T14:00:00Z",
+                "arrivalTime": "2024-09-05T22:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.2",
+        "busId": "bus239",
+        "amenities": ["WiFi", "AC", "Snack"],
+        "availableSeats": "20",
+        "departureTime": "2024-09-12T08:00:00Z",
+        "arrivalTime": "2024-09-12T18:00:00Z",
+        "price": "1300",
+        "totalSeats": "25",
+        "busName": "Super Deluxe",
+        "routes": [
+            {
+                "routeId": "indore-mumbai",
+                "source": "Indore",
+                "destination": "Mumbai",
+                "departureTime": "2024-09-12T08:00:00Z",
+                "arrivalTime": "2024-09-12T18:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.0",
+        "busId": "bus240",
+        "amenities": ["AC", "Charging Point"],
+        "availableSeats": "18",
+        "departureTime": "2024-09-12T11:00:00Z",
+        "arrivalTime": "2024-09-12T21:00:00Z",
+        "price": "1200",
+        "totalSeats": "20",
+        "busName": "Comfort Express",
+        "routes": [
+            {
+                "routeId": "indore-mumbai",
+                "source": "Indore",
+                "destination": "Mumbai",
+                "departureTime": "2024-09-12T11:00:00Z",
+                "arrivalTime": "2024-09-12T21:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.3",
+        "busId": "bus241",
+        "amenities": ["WiFi", "Snack", "Blanket"],
+        "availableSeats": "22",
+        "departureTime": "2024-09-12T15:00:00Z",
+        "arrivalTime": "2024-09-12T23:00:00Z",
+        "price": "1400",
+        "totalSeats": "25",
+        "busName": "Luxury Travel",
+        "routes": [
+            {
+                "routeId": "indore-mumbai",
+                "source": "Indore",
+                "destination": "Mumbai",
+                "departureTime": "2024-09-12T15:00:00Z",
+                "arrivalTime": "2024-09-12T23:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.1",
+        "busId": "bus242",
+        "amenities": ["AC"],
+        "availableSeats": "25",
+        "departureTime": "2024-09-12T19:00:00Z",
+        "arrivalTime": "2024-09-13T05:00:00Z",
+        "price": "1100",
+        "totalSeats": "30",
+        "busName": "Economy Shuttle",
+        "routes": [
+            {
+                "routeId": "indore-mumbai",
+                "source": "Indore",
+                "destination": "Mumbai",
+                "departureTime": "2024-09-12T19:00:00Z",
+                "arrivalTime": "2024-09-13T05:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.3",
+        "busId": "bus301",
+        "amenities": ["WiFi", "AC"],
+        "availableSeats": "30",
+        "departureTime": "2024-09-01T09:00:00Z",
+        "arrivalTime": "2024-09-01T18:00:00Z",
+        "price": "1150",
+        "totalSeats": "35",
+        "busName": "Royal Express",
+        "routes": [
+            {
+                "routeId": "jaipur-delhi",
+                "source": "Jaipur",
+                "destination": "Delhi",
+                "departureTime": "2024-09-01T09:00:00Z",
+                "arrivalTime": "2024-09-01T18:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.1",
+        "busId": "bus302",
+        "amenities": ["AC", "Snack"],
+        "availableSeats": "18",
+        "departureTime": "2024-09-01T14:00:00Z",
+        "arrivalTime": "2024-09-01T23:00:00Z",
+        "price": "1050",
+        "totalSeats": "22",
+        "busName": "Comfort Line",
+        "routes": [
+            {
+                "routeId": "jaipur-delhi",
+                "source": "Jaipur",
+                "destination": "Delhi",
+                "departureTime": "2024-09-01T14:00:00Z",
+                "arrivalTime": "2024-09-01T23:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.6",
+        "busId": "bus303",
+        "amenities": ["WiFi", "Snack", "Charging Point"],
+        "availableSeats": "25",
+        "departureTime": "2024-09-01T17:00:00Z",
+        "arrivalTime": "2024-09-01T02:00:00Z",
+        "price": "1250",
+        "totalSeats": "30",
+        "busName": "Premium Shuttle",
+        "routes": [
+            {
+                "routeId": "jaipur-delhi",
+                "source": "Jaipur",
+                "destination": "Delhi",
+                "departureTime": "2024-09-01T17:00:00Z",
+                "arrivalTime": "2024-09-01T02:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.0",
+        "busId": "bus304",
+        "amenities": ["AC"],
+        "availableSeats": "32",
+        "departureTime": "2024-09-01T20:00:00Z",
+        "arrivalTime": "2024-09-01T05:00:00Z",
+        "price": "980",
+        "totalSeats": "35",
+        "busName": "Standard Express",
+        "routes": [
+            {
+                "routeId": "jaipur-delhi",
+                "source": "Jaipur",
+                "destination": "Delhi",
+                "departureTime": "2024-09-01T20:00:00Z",
+                "arrivalTime": "2024-09-01T05:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.0",
+        "busId": "bus111",
+        "amenities": ["Charging Point"],
+        "availableSeats": "28",
+        "departureTime": "2024-09-11T07:00:00Z",
+        "arrivalTime": "2024-09-11T11:00:00Z",
+        "price": "450",
+        "totalSeats": "30",
+        "busName": "River Express",
+        "routes": [
+            {
+                "routeId": "kanpur-varanasi",
+                "source": "Kanpur",
+                "destination": "Varanasi",
+                "departureTime": "2024-09-11T07:00:00Z",
+                "arrivalTime": "2024-09-11T11:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.3",
+        "busId": "bus221",
+        "amenities": ["WiFi", "AC", "Snack"],
+        "availableSeats": "22",
+        "departureTime": "2024-09-06T08:00:00Z",
+        "arrivalTime": "2024-09-07T06:00:00Z",
+        "price": "1400",
+        "totalSeats": "30",
+        "busName": "Golden Express",
+        "routes": [
+            {
+                "routeId": "kolkata-delhi",
+                "source": "Kolkata",
+                "destination": "Delhi",
+                "departureTime": "2024-09-06T08:00:00Z",
+                "arrivalTime": "2024-09-07T06:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.2",
+        "busId": "bus222",
+        "amenities": ["AC", "Snack"],
+        "availableSeats": "20",
+        "departureTime": "2024-09-08T20:00:00Z",
+        "arrivalTime": "2024-09-09T07:00:00Z",
+        "price": "1200",
+        "totalSeats": "25",
+        "busName": "Silver Shuttle",
+        "routes": [
+            {
+                "routeId": "kolkata-delhi",
+                "source": "Kolkata",
+                "destination": "Delhi",
+                "departureTime": "2024-09-08T20:00:00Z",
+                "arrivalTime": "2024-09-09T07:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.4",
+        "busId": "bus223",
+        "amenities": ["WiFi", "AC", "Blanket"],
+        "availableSeats": "30",
+        "departureTime": "2024-09-10T13:00:00Z",
+        "arrivalTime": "2024-09-10T23:00:00Z",
+        "price": "1300",
+        "totalSeats": "35",
+        "busName": "Starline Express",
+        "routes": [
+            {
+                "routeId": "kolkata-delhi",
+                "source": "Kolkata",
+                "destination": "Delhi",
+                "departureTime": "2024-09-10T13:00:00Z",
+                "arrivalTime": "2024-09-10T23:00:00Z"
+            }
+        ]
+    },
+  
+]
+
+
+export const documentsToBuses = [
+    {
+        "rating": "4.4",
+        "busId": "bus1201",
+        "amenities": ["WiFi", "AC"],
+        "availableSeats": "28",
+        "departureTime": "2024-09-01T08:00:00Z",
+        "arrivalTime": "2024-09-02T06:00:00Z",
+        "price": "1400",
+        "totalSeats": "30",
+        "busName": "Ahmedabad-Bangalore Express",
+        "routes": [
+            {
+                "routeId": "ahmedabad-bangalore",
+                "source": "Ahmedabad",
+                "destination": "Bangalore",
+                "departureTime": "2024-09-01T08:00:00Z",
+                "arrivalTime": "2024-09-02T06:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.2",
+        "busId": "bus1202",
+        "amenities": ["AC", "Snack"],
+        "availableSeats": "22",
+        "departureTime": "2024-09-01T11:00:00Z",
+        "arrivalTime": "2024-09-02T09:00:00Z",
+        "price": "1300",
+        "totalSeats": "25",
+        "busName": "Comfort Line",
+        "routes": [
+            {
+                "routeId": "ahmedabad-bangalore",
+                "source": "Ahmedabad",
+                "destination": "Bangalore",
+                "departureTime": "2024-09-01T11:00:00Z",
+                "arrivalTime": "2024-09-02T09:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.6",
+        "busId": "bus1203",
+        "amenities": ["WiFi", "Snack", "Charging Point"],
+        "availableSeats": "24",
+        "departureTime": "2024-09-01T15:00:00Z",
+        "arrivalTime": "2024-09-02T13:00:00Z",
+        "price": "1500",
+        "totalSeats": "26",
+        "busName": "Luxury Shuttle",
+        "routes": [
+            {
+                "routeId": "ahmedabad-bangalore",
+                "source": "Ahmedabad",
+                "destination": "Bangalore",
+                "departureTime": "2024-09-01T15:00:00Z",
+                "arrivalTime": "2024-09-02T13:00:00Z"
+            },
+            {
+                "routeId": "bengaluru-hyderabad",
+                "source": "Bengaluru",
+                "destination": "Hyderabad",
+                "departureTime": "2024-09-01T16:00:00Z",
+                "arrivalTime": "2024-09-01T22:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.1",
+        "busId": "bus1204",
+        "amenities": ["AC"],
+        "availableSeats": "30",
+        "departureTime": "2024-09-01T20:00:00Z",
+        "arrivalTime": "2024-09-02T18:00:00Z",
+        "price": "1200",
+        "totalSeats": "32",
+        "busName": "Economy Express",
+        "routes": [
+            {
+                "routeId": "ahmedabad-bangalore",
+                "source": "Ahmedabad",
+                "destination": "Bangalore",
+                "departureTime": "2024-09-01T20:00:00Z",
+                "arrivalTime": "2024-09-02T18:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.4",
+        "busId": "bus107",
+        "amenities": ["AC", "WiFi", "Entertainment"],
+        "availableSeats": "27",
+        "departureTime": "2024-09-07T16:00:00Z",
+        "arrivalTime": "2024-09-08T10:00:00Z",
+        "price": "850",
+        "totalSeats": "30",
+        "busName": "Royal Journey",
+        "routes": [
+            {
+                "routeId": "ahmedabad-jaipur",
+                "source": "Ahmedabad",
+                "destination": "Jaipur",
+                "departureTime": "2024-09-07T16:00:00Z",
+                "arrivalTime": "2024-09-08T10:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.0",
+        "busId": "bus209",
+        "amenities": ["AC", "Charging Point"],
+        "availableSeats": "28",
+        "departureTime": "2024-09-03T11:00:00Z",
+        "arrivalTime": "2024-09-03T23:00:00Z",
+        "price": "800",
+        "totalSeats": "35",
+        "busName": "South Express",
+        "routes": [
+            {
+                "routeId": "bangalore-chennai",
+                "source": "Bangalore",
+                "destination": "Chennai",
+                "departureTime": "2024-09-03T11:00:00Z",
+                "arrivalTime": "2024-09-03T23:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.1",
+        "busId": "bus210",
+        "amenities": ["WiFi"],
+        "availableSeats": "30",
+        "departureTime": "2024-09-03T13:00:00Z",
+        "arrivalTime": "2024-09-03T23:30:00Z",
+        "price": "850",
+        "totalSeats": "35",
+        "busName": "Fast Track",
+        "routes": [
+            {
+                "routeId": "bangalore-chennai",
+                "source": "Bangalore",
+                "destination": "Chennai",
+                "departureTime": "2024-09-03T13:00:00Z",
+                "arrivalTime": "2024-09-03T23:30:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.2",
+        "busId": "bus211",
+        "amenities": ["AC", "Snack"],
+        "availableSeats": "24",
+        "departureTime": "2024-09-03T15:00:00Z",
+        "arrivalTime": "2024-09-03T22:00:00Z",
+        "price": "780",
+        "totalSeats": "25",
+        "busName": "Comfort Ride",
+        "routes": [
+            {
+                "routeId": "bangalore-chennai",
+                "source": "Bangalore",
+                "destination": "Chennai",
+                "departureTime": "2024-09-03T15:00:00Z",
+                "arrivalTime": "2024-09-03T22:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.3",
+        "busId": "bus212",
+        "amenities": ["WiFi", "Charging Point"],
+        "availableSeats": "26",
+        "departureTime": "2024-09-03T17:00:00Z",
+        "arrivalTime": "2024-09-03T23:00:00Z",
+        "price": "820",
+        "totalSeats": "30",
+        "busName": "Luxury Express",
+        "routes": [
+            {
+                "routeId": "bangalore-chennai",
+                "source": "Bangalore",
+                "destination": "Chennai",
+                "departureTime": "2024-09-03T17:00:00Z",
+                "arrivalTime": "2024-09-03T23:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.3",
+        "busId": "bus301",
+        "amenities": ["WiFi", "AC", "Charging Point"],
+        "availableSeats": "30",
+        "departureTime": "2024-09-01T08:30:00Z",
+        "arrivalTime": "2024-09-01T16:30:00Z",
+        "price": "1500",
+        "totalSeats": "45",
+        "busName": "Velocity Travel",
+        "routes": [
+            {
+                "routeId": "bangalore-hyderabad",
+                "source": "Bangalore",
+                "destination": "Hyderabad",
+                "departureTime": "2024-09-01T08:30:00Z",
+                "arrivalTime": "2024-09-01T16:30:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.1",
+        "busId": "bus302",
+        "amenities": ["AC", "Snack"],
+        "availableSeats": "24",
+        "departureTime": "2024-09-01T10:00:00Z",
+        "arrivalTime": "2024-09-01T18:00:00Z",
+        "price": "1200",
+        "totalSeats": "30",
+        "busName": "Express Journey",
+        "routes": [
+            {
+                "routeId": "bangalore-hyderabad",
+                "source": "Bangalore",
+                "destination": "Hyderabad",
+                "departureTime": "2024-09-01T10:00:00Z",
+                "arrivalTime": "2024-09-01T18:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.5",
+        "busId": "bus303",
+        "amenities": ["WiFi", "Charging Point"],
+        "availableSeats": "25",
+        "departureTime": "2024-09-01T12:00:00Z",
+        "arrivalTime": "2024-09-01T20:00:00Z",
+        "price": "1300",
+        "totalSeats": "30",
+        "busName": "Swift Shuttle",
+        "routes": [
+            {
+                "routeId": "bangalore-hyderabad",
+                "source": "Bangalore",
+                "destination": "Hyderabad",
+                "departureTime": "2024-09-01T12:00:00Z",
+                "arrivalTime": "2024-09-01T20:00:00Z"
+            }
+        ]
+    },
+    {
+        "rating": "4.2",
+        "busId": "bus304",
+        "amenities": ["AC"],
+        "availableSeats": "30",
+        "departureTime": "2024-09-01T14:00:00Z",
+        "arrivalTime": "2024-09-01T22:00:00Z",
+        "price": "1100",
+        "totalSeats": "32",
+        "busName": "Budget Ride",
+        "routes": [
+            {
+                "routeId": "bangalore-hyderabad",
+                "source": "Bangalore",
+                "destination": "Hyderabad",
+                "departureTime": "2024-09-01T14:00:00Z",
+                "arrivalTime": "2024-09-01T22:00:00Z"
+            }
+        ]
+    },
+    ...documentsToBuses1
+]

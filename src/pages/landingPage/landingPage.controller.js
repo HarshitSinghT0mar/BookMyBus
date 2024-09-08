@@ -3,7 +3,8 @@ import getDocumentData from "../../utils/getDocumentData"
 import { COLLECTIONS } from "../../constants"
 import { addMultipleDocuments } from "../../utils/addDocuments"
 import { useNavigate, useParams } from "react-router"
-import { documentsToRoutes } from "../../constants/constant.data"
+import { documentsToBuses, documentsToRoutes } from "../../constants/constant.data"
+import { getAllDocuments } from "../../utils/getAllDocuments"
 
 const INITIAL_ROUTE_DATA = {
     source: '',
@@ -42,10 +43,8 @@ export const useLandingPageController = () => {
     }
 
 
-
-
     const addRoutes = async () => {
-        const res = await addMultipleDocuments(COLLECTIONS?.ROUTES, documentsToRoutes)
+        const res = await addMultipleDocuments(COLLECTIONS?.BUSES, documentsToBuses)
         console.log({ res });
     }
 
@@ -54,13 +53,13 @@ export const useLandingPageController = () => {
     }
 
 
+
     useEffect(() => {
         const getRouteBuses = async (routeId) => {
             const res = await getDocumentData(COLLECTIONS?.ROUTES, routeId)
             setCurrentRouteData(res)
         }
         getRouteBuses(routeId)
-        // addRoutes()
     }, [routeId])
 
 
