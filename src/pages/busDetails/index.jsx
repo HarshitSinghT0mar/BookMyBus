@@ -1,6 +1,9 @@
 import { useState } from 'react';
+import { useBusDetailsController } from './busDetails.controller';
 
-const BusDetailsAndSeatSelection = ({ busData=[] }) => {
+const BusDetails = () => {
+    const { busId, routeId, busData } = useBusDetailsController()
+
     const [selectedSeats, setSelectedSeats] = useState([]);
 
     const toggleSeatSelection = (seatId) => {
@@ -39,20 +42,20 @@ const BusDetailsAndSeatSelection = ({ busData=[] }) => {
             <div className="mt-8">
                 <h2 className="text-xl font-semibold mb-4">Route Information</h2>
                 {busData?.routes?.map((route) => (
-                    <div key={route.routeId} className="border p-4 rounded-lg mb-4">
-                        <p>From: {route.source} To: {route.destination}</p>
+                    <div key={route?.routeId} className="border p-4 rounded-lg mb-4">
+                        <p>From: {route?.source} To: {route.destination}</p>
                         <p>Departure: {new Date(route.departureTime).toLocaleString()}</p>
                         <p>Arrival: {new Date(route.arrivalTIme).toLocaleString()}</p>
-                        <p>Price: ${route.price}</p>
+                        <p>Price: ${route?.price}</p>
 
                         <h3 className="text-lg font-semibold mt-4 mb-2">Seat Selection</h3>
                         <div className="grid grid-cols-4 gap-2">
-                            {route.seats.map((seat) => (
+                            {route?.seats?.map((seat) => (
                                 <button
-                                    key={seat.seatId}
+                                    key={seat?.seatId}
                                     className={`p-2 rounded ${seat.isBooked
                                         ? 'bg-gray-300 cursor-not-allowed'
-                                        : selectedSeats.includes(seat.seatId)
+                                        : selectedSeats.includes(seat?.seatId)
                                             ? 'bg-green-500 text-white'
                                             : 'bg-blue-100 hover:bg-blue-200'
                                         }`}
@@ -61,7 +64,7 @@ const BusDetailsAndSeatSelection = ({ busData=[] }) => {
                                 >
                                     {seat.seatId}
                                     {seat.reservation.isReserved && (
-                                        {/* <User className="inline ml-1" size={16} /> */}
+                                        {/* <User className="inline ml-1" size={16} /> */ }
                                     )}
                                 </button>
                             ))}
@@ -83,4 +86,4 @@ const BusDetailsAndSeatSelection = ({ busData=[] }) => {
     );
 };
 
-export default BusDetailsAndSeatSelection;
+export default BusDetails;

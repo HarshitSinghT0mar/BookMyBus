@@ -1,4 +1,3 @@
-import Input from '../../components/ui/input'
 import PrimaryButton from '../../components/ui/button/primaryButton'
 import { CITIES } from '../../data/cities'
 import SelectInput from '../../components/ui/selectInput'
@@ -45,7 +44,7 @@ const LandingPage = () => {
                     </form>
                 </div>
             </div>
-            {(currentRouteData && currentRouteData?.buses?.length) ? <div className='grid grid-cols-3 gap-6 mt-4 p-4'>
+            {(currentRouteData && currentRouteData?.buses?.length) ? <div className='grid grid-cols-3 gap-4 mt-4 p-4'>
                 {currentRouteData?.buses?.map((bus) => {
                     return <BusDetailsCard key={bus?.busId} {...currentRouteData} {...bus} routeId={routeId} />
                 })}

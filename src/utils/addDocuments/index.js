@@ -6,10 +6,10 @@ export const addMultipleDocuments = async (collectionName, documents) => {
         const docIds = [];
         for (const docData of documents) {
 
-            const { busId, ...data } = docData;
-            const docRef = doc(collection(db, collectionName), busId);
+            const { id, ...data } = docData;
+            const docRef = doc(collection(db, collectionName), id);
             await setDoc(docRef, data);
-            docIds.push(busId);
+            docIds.push(id);
         }
         console.log("Documents added with IDs: ", docIds);
         return docIds;

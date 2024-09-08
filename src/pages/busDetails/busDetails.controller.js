@@ -5,16 +5,20 @@ import { useParams } from "react-router"
 
 export const useBusDetailsController = () => {
     const [busData, setBusData] = useState(null)
-    const {busId}=useParams()
+    const { busId, routeId } = useParams()
     const getBusDetails = async () => {
-        const res = await getDocumentData(COLLECTIONS?.BUSES, busId)
-        console.log({res});
+        const res = await getDocumentData(COLLECTIONS?.BUSES, 'busId')
+        console.log({ res });
+        // setBusData(res)
     }
 
     useState(() => {
         getBusDetails()
-    },[])
+    }, [])
+    
     return {
-busData
+        busData,
+        routeId,
+        busId
     }
 }
